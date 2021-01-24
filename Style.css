@@ -1,0 +1,25 @@
+body {
+  margin: 0px;
+  width: 100%;
+}
+
+p {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.header_div {
+  width: 100%;
+  height: 40px;
+  
+  background-color: hsl(0, 0%, 0%);
+}
+
+.header_div > .title {
+  color: hsl(0, 0%, 100%);
+}
+
+#webgl_rendering_canvas {
+  width: 100%;
+  height: calc(100% - 40px);
+}
