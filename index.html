@@ -1,12 +1,21 @@
 <html>
  	<head>
+		 <!-- Resources -->
 		<link rel="stylesheet" href="Style.css">
-		<!-- <script type="module" src="Shaders/StubVS.js"></script> -->
+		<script type="text/javascript" src="Shaders/StrandsPS.js"></script>
+		<script type="text/javascript" src="Shaders/test.js"></script>
 		<script type="text/javascript" src="main.js"></script>
  	</head>
  	<body>
 		<div class="header_div">
-			<p class="title">Butcher Tibi is doing WebGL 2.0</p>
+			<p class="title">Măcelaru Tiberiu WebGL Showcase</p>
+			<p id="shader_name">Shader name</p>
+			<div class="shader">
+				<div class="pick_btns_wrap">
+					<button class="pick_btns" id="prev">Prev</button>
+					<button class="pick_btns" id="next">Next</button>
+				</div>
+			</div>
 		</div>
 		<canvas id="webgl_rendering_canvas"></canvas>
  	</body>

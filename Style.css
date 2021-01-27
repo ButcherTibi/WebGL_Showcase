@@ -1,6 +1,14 @@
 body {
   margin: 0px;
   width: 100%;
+
+  --text_0_color: hsl(0, 0%, 95%);
+  --text_1_color: hsl(0, 0%, 0%);
+  --text_1_font: "Lucida Console";
+  --text_size: 16px;
+
+  --theme_color_0: hsl(240, 43%, 47%);
+  --theme_color_1: hsl(157, 43%, 47%);
 }
 
 p {
@@ -11,12 +19,80 @@ p {
 .header_div {
   width: 100%;
   height: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   
-  background-color: hsl(0, 0%, 0%);
+  background-color: var(--theme_color_0);
 }
 
 .header_div > .title {
-  color: hsl(0, 0%, 100%);
+  color: var(--text_0_color);
+  font-family: "Lucida Console";
+  font-size: var(--text_size);
+}
+
+#shader_name {
+  color: var(--text_0_color);
+  font-family: var(--text_1_font);
+  font-size: var(--text_size);
+}
+
+.pick_btns_wrap {
+  display: flex;
+  
+  margin: 0px;
+  padding: 0px 20px 0px 0px;
+}
+
+.pick_btns {
+  outline-style: none;
+  margin: 0px;
+  border-width: 0px;
+  border-style: none;
+  background-color: var(--text_0_color);
+  
+  color: var(--text_1_color);
+  font-family: var(--text_1_font);
+  font-size: var(--text_size);
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  --hover_back_color: var(--theme_color_1);
+  --hover_color: var(--text_0_color);
+
+  --corner_rounding_outside: 40px;
+  --corner_rounding_inside: 4px;
+  --padding_outer: 12px;
+  --padding_inner: 5px;
+}
+
+.pick_btns:hover {
+  background-color: var(--hover_back_color);
+  color: var(--hover_color);
+  cursor: pointer;
+}
+
+.pick_btns:active {
+  background-color: var(--hover_color);
+  color: var(--hover_back_color);
+}
+
+#prev {
+  margin-right: 5px;
+
+  border-radius: var(--corner_rounding_outside) var(--corner_rounding_inside) 
+    var(--corner_rounding_inside) var(--corner_rounding_outside);
+  padding-right: var(--padding_inner);
+  padding-left: var(--padding_outer);
+}
+
+#next {
+  border-radius: var(--corner_rounding_inside) var(--corner_rounding_outside) 
+    var(--corner_rounding_outside) var(--corner_rounding_inside);
+  padding-right: var(--padding_outer);
+  padding-left: var(--padding_inner);
 }
 
 #webgl_rendering_canvas {
